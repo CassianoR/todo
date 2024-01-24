@@ -1,13 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Todo.Models;
+namespace Todo.Entities;
 
 public class TodoItem
 {
     public DateTime CreatedAt { get; protected set; }
     public string Description { get; protected set; }
+
     [Key]
     public Guid Id { get; protected set; }
+
     public DateTime UpdatedAt { get; protected set; }
     public TodoItemStatus Status { get; protected set; }
     public string Title { get; protected set; }
